@@ -38,6 +38,14 @@ const members = [
     ig: "albertcheng65", 
     photos: ["/team/albert-cheng-1.jpg", "/team/albert-cheng-2.jpg", "/team/albert-cheng-3.jpg"] 
   },
+  {
+    name: "Dr. Kestrilia Rega P., M.Si.",           
+    role: "🎓 Dosen Pembimbing", 
+    prodi: "Dosen Teknik Informatika",             
+    nim: "-", 
+    ig: "machung_it", 
+    photos: ["/team/bu-lia.png"] 
+  }
 ];
 
 function TeamMemberCard({ member }: { member: typeof members[0] }) {
@@ -126,35 +134,13 @@ export default function Team() {
         </AnimateOnScroll>
 
         {/* Member cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           {members.map((m, i) => (
             <AnimateOnScroll key={m.name} direction="up" delay={i * 0.1}>
               <TeamMemberCard member={m} />
             </AnimateOnScroll>
           ))}
         </div>
-
-        {/* Dosen Pembimbing */}
-        <AnimateOnScroll direction="up" delay={0.2}>
-          <motion.div
-            whileHover={{ borderColor: "rgba(57,206,221,0.3)", y: -4, boxShadow: "0 12px 40px rgba(57,206,221,.1)" }}
-            className="bg-gradient-to-br from-teal/10 to-navy/15 border border-teal/20 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8 sm:gap-10 transition-all duration-300 relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-teal/5 rounded-full blur-[80px] pointer-events-none" />
-            <div className="w-[140px] h-[140px] rounded-full border-[4px] border-teal/30 overflow-hidden flex-shrink-0 relative z-10 shadow-[0_0_30px_rgba(57,206,221,0.2)]">
-              <Image src="/team/bu-lia.png" alt="Dr. Kestrilia Rega Prilianti" fill className="object-cover object-top" />
-            </div>
-            <div className="text-center sm:text-left z-10">
-              <h3 className="text-[24px] font-extrabold mb-2">Dr. Kestrilia Rega P., M.Si.</h3>
-              <span className="inline-block bg-teal/15 border border-teal/30 text-teal text-[12px] font-bold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
-                🎓 Dosen Pembimbing
-              </span>
-              <p className="text-[15px] text-white/60 leading-[1.75] max-w-2xl">
-                Dosen Teknik Informatika Universitas Ma Chung. Doktor Matematika dari Universitas Brawijaya. Pakar di bidang Machine Learning, Computer Vision, dan Deep Learning. Pembimbing PKM-KC MedSign 2026.
-              </p>
-            </div>
-          </motion.div>
-        </AnimateOnScroll>
       </div>
     </section>
   );

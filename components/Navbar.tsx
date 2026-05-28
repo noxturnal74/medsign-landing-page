@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram } from "lucide-react";
-import DolphinSVG from "./DolphinSVG";
-
+import Image from "next/image";
 const links = [
   { href: "#about",  label: "Tentang" },
   { href: "#how",    label: "Cara Kerja" },
@@ -53,7 +52,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <button onClick={() => handleNav("#hero")} className="flex items-center gap-2.5 font-extrabold text-xl tracking-tight">
-          <DolphinSVG size={34} />
+          <Image src="/images/medsign_logo.png" alt="MedSign Logo" width={34} height={34} className="rounded-md" />
           <span className="text-teal">Med</span><span className="text-white">Sign</span>
         </button>
 

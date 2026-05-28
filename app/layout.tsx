@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MedSign AI – Komunikasi Tanpa Batas untuk Semua Pasien",
+  title: "MedSign AI",
   description:
-    "MedSign mendeteksi Bahasa Isyarat Indonesia (BISINDO) secara real-time menggunakan Computer Vision & Deep Learning — menjembatani tenaga medis dan pasien tunarungu tanpa hambatan. PKM-KC 2026 Universitas Ma Chung.",
+    "MedSign – Sistem Pendeteksi Bahasa Isyarat Indonesia berbasis Computer Vision & Deep Learning untuk komunikasi inklusif tenaga medis dan tunarungu.",
   keywords: ["MedSign", "BISINDO", "bahasa isyarat", "tunarungu", "PKM-KC", "computer vision", "deep learning"],
   openGraph: {
     title: "MedSign AI – Komunikasi Tanpa Batas",
